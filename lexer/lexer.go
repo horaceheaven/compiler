@@ -15,3 +15,9 @@ type Lexer struct {
 
 	prevToken token.Token
 }
+
+func New(input string) *Lexer {
+	l := &Lexer{characters: []rune(input)}
+	l.readChar()
+	return l
+}
